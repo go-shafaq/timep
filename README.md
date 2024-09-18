@@ -1,6 +1,6 @@
 # Time Parser
 
-`timep` is a Go package for parsing and working with extended time durations. It supports common time units like years (`y`), months (`M`), weeks (`w`), days (`d`), hours (`h`), and so on. Additionally, it allows defining custom time units for more flexible duration parsing.
+`timep`(Time P) is a Go package for parsing and working with extended time durations. It supports common time units like years (`y`), months (`M`), weeks (`w`), days (`d`), hours (`h`), and so on. Additionally, it allows defining custom time units for more flexible duration parsing.
 
 ## Installation
 
