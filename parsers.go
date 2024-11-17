@@ -1,21 +1,25 @@
 package timep
 
-import "time"
-
 var (
 	stdParser, _ = DurationParser(unitMap)
 	commParser   = commonParser()
 )
 
 func commonParser() *durationParser {
-	const day = uint64(24 * time.Hour)
-
 	um := BaseUnitMap()
-	um["d"] = day
-	um["w"] = 7 * day
-	um["M"] = 30 * day
-	um["y"] = 365 * day
+
+	um["D"] = uint64(Day)
+	um["d"] = uint64(Day) // for flexibility
+
+	um["W"] = uint64(Week)
+	um["w"] = uint64(Week) // for flexibility
+
+	um["M"] = uint64(Month)
+
+	um["Y"] = uint64(Year)
+	um["y"] = uint64(Year) // for flexibility
 
 	cp, _ := DurationParser(um)
+
 	return cp
 }

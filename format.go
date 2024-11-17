@@ -98,17 +98,17 @@ func leadingFraction(s string) (x uint64, scale float64, rem string) {
 }
 
 // StdParseDuration = time.ParseDuration
-// StdParseDuration works just like time.ParseDuration
+// StdParseDuration works like time.ParseDuration
 func StdParseDuration(s string) (Duration, error) {
-	return commParser.ParseDuration(s)
+	return stdParser.ParseDuration(s)
 }
 
 // ParseDuration additionally allows using following units
 //
-//	    "d" = day	= 24h
-//		"w" = week	= 7d
+//	    "D" = day	= 24h
+//		"W" = week	= 7d
 //		"M" = month	= 30d
-//		"y" = year	= 365d
+//		"Y" = year	= 365d
 func ParseDuration(s string) (Duration, error) {
 	return commParser.ParseDuration(s)
 }
